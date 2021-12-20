@@ -5,7 +5,7 @@ var b
 function calculer() 
 { 
      a = document.getElementById("output").value 
-     b = eval(a)
+     b = a
     document.getElementById("output").value = b 
 } 
 //fonction qui affiche la valeur
