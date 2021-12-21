@@ -4,13 +4,11 @@ var bString
 var operation
 var a
 var b
-var total
+var resultat
+
+// click sur nombre
 
 function ClickSurnombre(number) {
-
-
-
-
     if (aString == undefined) {
         aString = number
     } else {
@@ -19,6 +17,7 @@ function ClickSurnombre(number) {
 
     afficheur()
 }
+// afficheur
 
 function afficheur(number) {
     var afficheur = document.getElementById("afficheur")
@@ -28,19 +27,19 @@ function afficheur(number) {
         afficheur.value = number
     } else {
         if (aString != undefined) {
-            afficheur.value += aString
+            afficheur.value =  afficheur.value + aString
         }
         if (operation != undefined) {
-            afficheur.value += operation
+            afficheur.value = afficheur.value + operation
         }
         if (bString != undefined) {
-            afficheur.value += bString
+            afficheur.value =  afficheur.value + bString
         }
     }
 
 }
 
-
+//  operation 
 function Operation(operationParm) {
     if (operation == undefined) {
         operation = operationParm
@@ -49,28 +48,48 @@ function Operation(operationParm) {
     afficheur()
 }
 
+// egale  : 
+
 function Egale() {
     a = parseFloat(aString);
     b = parseFloat(bString);
 
-    total = calculate(a, b, operation)
+    resultat = calculate(a, b, operation)
 
-    afficheur(total)
+    afficheur(resultat)
 
 }
+//  calculer:
 
 function calculate(aPara, bPara, operationPara) {
-    var _total = undefined
+    var _resultat = undefined
 
     switch (operationPara) {
         case "+":
-            _total = aPara + bPara
+            _resultat = aPara + bPara 
             break;
-
+        case '-':
+            _resultat = aPara - bPara;
+            break;
 
         default:
             break;
     }
 
-    return _total
+    return _resultat
 }
+
+// suprimmer:
+function suprimer (){
+    aString = undefined; 
+    bString =undefined;
+    operation =undefined;
+    a =undefined;
+    b =undefined;
+    resultat = undefined;
+    var afficheur = document.getElementById('afficheur');
+    
+    afficheur.value = '';
+} 
+    
+     
