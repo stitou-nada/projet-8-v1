@@ -1,86 +1,76 @@
-// Variables
-var x,y,solution,operation;
-var xString, yString;
+// declaration des variable
+var aString
+var bString
+var operation
+var a
+var b
+var total
+
+function ClickSurnombre(number) {
 
 
 
-// Métier
-function Calculer(x,y,operation){
-    var _solution = undefined;
-    switch (operation) {
-        case '+':
-            _solution = x + y;
+
+    if (aString == undefined) {
+        aString = number
+    } else {
+        bString = number
+    }
+
+    afficheur()
+}
+
+function afficheur(number) {
+    var afficheur = document.getElementById("afficheur")
+    afficheur.value = ''
+
+    if (a != undefined && b != undefined && operation != undefined) {
+        afficheur.value = number
+    } else {
+        if (aString != undefined) {
+            afficheur.value += aString
+        }
+        if (operation != undefined) {
+            afficheur.value += operation
+        }
+        if (bString != undefined) {
+            afficheur.value += bString
+        }
+    }
+
+}
+
+
+function Operation(operationParm) {
+    if (operation == undefined) {
+        operation = operationParm
+    }
+
+    afficheur()
+}
+
+function Egale() {
+    a = parseFloat(aString);
+    b = parseFloat(bString);
+
+    total = calculate(a, b, operation)
+
+    afficheur(total)
+
+}
+
+function calculate(aPara, bPara, operationPara) {
+    var _total = undefined
+
+    switch (operationPara) {
+        case "+":
+            _total = aPara + bPara
             break;
-        case '-':
-            _solution = x-y;
-                break;
+
+
         default:
             break;
     }
-    return _solution;
+
+    return _total
 }
-
-
-// traitement
-function cliquezNombre(Nombre){
-    if(x == undefined){
-        if(xString == undefined) xString = '';
-        xString += Nombre;
-    } 
-    else {
-        if(yString == undefined) yString = '';
-        yString += Nombre;
-    } 
-
-    Afficher();
-}
-
-function Afficher(Nombre){
-
-    var afficheur = document.getElementById("afficheur");
-    afficheur.value = "";
-    
-    if(x != undefined && y != undefined && operation != undefined){
-
-        afficheur.value = Nombre;
-    }else{
-        if(xString != undefined)
-        afficheur.value += xString 
-        if(operation != undefined)
-            afficheur.value += operation     
-        if(yString != undefined)
-            afficheur.value += yString 
-
-        }
- 
-   
-}
-
-
-function Operation(operationParam){
-    if(operation == undefined){
-        operation = operationParam;
-        x = parseFloat(xString);
-        Afficher();
-    }
-}
-
-function Egale(){
-    x = parseFloat(xString);
-    y = parseFloat(yString);
-    solution = Calculer(x,y,operation);
-    Afficher(solution);
-}
-
-function Init(){
-    x = undefined;
-    y = undefined;
-    xString = undefined;
-    yString = undefined;
-    operation = undefined;
-    var afficheur = document.getElementById("afficheur");
-    
-    afficheur.value = "";
-}
-
-  
