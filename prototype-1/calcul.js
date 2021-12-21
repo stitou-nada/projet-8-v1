@@ -22,27 +22,27 @@ function Calculer(x,y,operation){
 
 
 // traitement
-function ClickNumber(number){
+function cliquezNombre(Nombre){
     if(x == undefined){
         if(xString == undefined) xString = '';
-        xString += number;
+        xString += Nombre;
     } 
     else {
         if(yString == undefined) yString = '';
-        yString += number;
+        yString += Nombre;
     } 
 
     Afficher();
 }
 
-function Afficher(number){
+function Afficher(Nombre){
 
     var afficheur = document.getElementById("afficheur");
     afficheur.value = "";
     
     if(x != undefined && y != undefined && operation != undefined){
 
-        afficheur.value = number;
+        afficheur.value = Nombre;
     }else{
         if(xString != undefined)
         afficheur.value += xString 
