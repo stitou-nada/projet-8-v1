@@ -61,22 +61,22 @@ function Egale() {
 }
 //  calculer:
 
-function calculate(aPara, bPara, operationPara) {
-    var _resultat = undefined
+function calculate(a, b, operation) {
+    var resultat = undefined
 
-    switch (operationPara) {
+    switch (operation) {
         case "+":
-            _resultat = aPara + bPara 
+            resultat = a + b 
             break;
         case '-':
-            _resultat = aPara - bPara;
+            resultat = a - b;
             break;
 
         default:
             break;
     }
 
-    return _resultat
+    return resultat
 }
 
 // suprimmer:
