@@ -7,11 +7,13 @@ var operation
 var resultat
 // click sur nombre
 function onclickSurnombre(number) {
-    if (aString == undefined) {
-        aString = number
-    }
-    else{
-        bString = number
+    if(a == undefined){
+        if(aString == undefined) aString = '';
+        aString += number;
+    } 
+    else {
+        if(bString == undefined) bString = '';
+        bString += number;
     }
     afficheur()
     
@@ -39,6 +41,7 @@ function afficheur(number) {
 }
 // operation
 function operaTion(operationparam) {
+    a = parseFloat(aString)
     if (operation == undefined) {
         operation = operationparam
     }

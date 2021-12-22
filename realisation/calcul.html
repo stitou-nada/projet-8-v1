@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculatrice</title>
     <script src="calcul.js"></script>
+    <link rel="stylesheet" href="style.css">
 <body>
-    <input type="text" id="afficheur">
+    <input  type="text" id="afficheur">
+    <button onclick="suprimer()">c</button>
+    <div id="btn">
     <div id="ligne1">
-    <button onclick="onclickSurnombre(1)">1</button>
-    <button onclick="onclickSurnombre(2)">2</button>
-    <button onclick="onclickSurnombre(3)">3</button>
+    <button onclick="onclickSurnombre(7)">7</button>
+    <button onclick="onclickSurnombre(8)">8</button>
+    <button onclick="onclickSurnombre(9)">9</button>
     <button onclick="operaTion('+')">+</button>
    </div>
-   <div>
+   <div id="ligne2">
     <button onclick="onclickSurnombre(4)">4</button>
     <button onclick="onclickSurnombre(5)">5</button>
     <button onclick="onclickSurnombre(6)">6</button>
     <button onclick="operaTion('-')">-</button>
    </div>
-   <div>
-    <button onclick="onclickSurnombre(7)">7</button>
-    <button onclick="onclickSurnombre(8)">8</button>
-    <button onclick="onclickSurnombre(9)">9</button>
+   <div id="ligne3">
+      <button onclick="onclickSurnombre(1)">1</button>
+    <button onclick="onclickSurnombre(2)">2</button>
+    <button onclick="onclickSurnombre(3)">3</button>
     <button onclick="operaTion('*')">*</button>
    </div>
-    <button onclick="Egale()">=</button>
-    <button onclick="suprimer()">c</button>
+   <div id="ligne4">
+    <button onclick="onclickSurnombre(0)">0</button>
+    <button onclick="onclickSurnombre('.')">.</button>
+    <button onclick="Egale()">=</button> 
+    <button onclick="operaTion('/')">/</button>
+    
+   </div>
+  </div>
 </body>
 </html>
