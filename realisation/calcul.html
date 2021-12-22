@@ -5,41 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculatrice</title>
-    <style>
-        td button{width:100%}
-    </style>
-</head>
+    <script src="calcul.js"></script>
 <body>
-    <table > 
-        <tr> 
-           <td colspan="3"><input id="output"/></td> 
-           <td><button onclick="effacer()">c</button></td> 
-        </tr> 
-        <tr> 
-           <td><button onclick="afficher('1')">1</button></td> 
-           <td><button onclick="afficher('2')">2</button></td> 
-           <td><button onclick="afficher('3')">3</button></td> 
-           <td><button onclick="afficher('+')">+</button></td> 
-        </tr> 
-        <tr> 
-           <td><button onclick="afficher('4')">4</button></td> 
-           <td><button onclick="afficher('5')">5</button></td> 
-           <td><button onclick="afficher('6')">6</button></td> 
-           <td><button onclick="afficher('-')">-</button></td> 
-        </tr> 
-        <tr> 
-           <td><button onclick="afficher('7')">7</button></td> 
-           <td><button onclick="afficher('8')">8</button></td> 
-           <td><button onclick="afficher('9')">9</button></td> 
-           <td><button onclick="afficher('*')">*</button></td> 
-        </tr> 
-        <tr>
-           <td><button onclick="afficher('.')">.</button></td> 
-           <td><button onclick="afficher('0')">0</button></td> 
-           <td><button onclick="calculer()">=</button></td> 
-           <td><button onclick="afficher('/')">/</button></td> 
-        </tr> 
-     </table> 
-     <script src="calcul.js"></script>
+    <input type="text" id="afficheur">
+    <div id="ligne1">
+    <button onclick="onclickSurnombre(1)">1</button>
+    <button onclick="onclickSurnombre(2)">2</button>
+    <button onclick="onclickSurnombre(3)">3</button>
+    <button onclick="operaTion('+')">+</button>
+   </div>
+   <div>
+    <button onclick="onclickSurnombre(4)">4</button>
+    <button onclick="onclickSurnombre(5)">5</button>
+    <button onclick="onclickSurnombre(6)">6</button>
+    <button onclick="operaTion('-')">-</button>
+   </div>
+   <div>
+    <button onclick="onclickSurnombre(7)">7</button>
+    <button onclick="onclickSurnombre(8)">8</button>
+    <button onclick="onclickSurnombre(9)">9</button>
+    <button onclick="operaTion('*')">*</button>
+   </div>
+    <button onclick="Egale()">=</button>
+    <button onclick="suprimer()">c</button>
 </body>
 </html>
