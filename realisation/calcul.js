@@ -64,6 +64,12 @@ function calculer(a,b,operation) {
         case '-':
             _resultat = a - b
             break;
+        case '*':
+            _resultat = a * b
+            break;
+        case '/':
+            _resultat = a / b
+            break;
     
         default:
             break;
