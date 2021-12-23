@@ -1,10 +1,11 @@
 // declaration des variable
-var aString
-var bString
-var operation
 var a
 var b
+var operation
 var resultat
+var aString
+var bString
+
 
 // click sur nombre
 
