@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculatrice</title>
-    <script src="calcul.js"></script>
+    <script src="calculer.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
+  <div class="calcul">
     <input  type="text" id="afficheur">
     <button class="click" onclick="suprimer()">c</button>
-    <div id="btn">
-    
+   <div class="calculator">
     <button class="click" onclick="onclickSurnombre(8)">7</button>
     <button class="click" onclick="onclickSurnombre(8)">8</button>
     <button class="click" onclick="onclickSurnombre(9)">9</button>
@@ -28,11 +28,11 @@
     <button class="click" onclick="operaTion('*')">*</button>
   <br>
     <button class="click" onclick="onclickSurnombre(0)">0</button>
-    <button class="click" onclick="onclickSurnombre('.')">.</button>
-    <button class="click" onclick="Egale()">=</button> 
-    <button class="click" onclick="operaTion('/')">/</button>
+    <button class="click-point" onclick="onclickSurnombre('.')">.</button>
+    <button class="click-egale" onclick="Egale()">=</button> 
+    <button class="click-suprimer" onclick="operaTion('/')">/</button>
     
-   
+  </div>
   </div>
 </body>
 </html>

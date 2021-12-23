@@ -21,7 +21,7 @@ function onclickSurnombre(number) {
 // afficher
 function afficheur(number) {
     var afficheur = document.getElementById("afficheur")
-    afficheur.value = ''
+     afficheur.value = '';
     if (a != undefined && b != undefined && operation != undefined  ) {
         afficheur.value = number
         
