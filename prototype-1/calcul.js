@@ -1,96 +1,86 @@
 // declaration des variable
+var aString
+var bString
 var a
 var b
 var operation
 var resultat
-var aString
-var bString
-
-
 // click sur nombre
-
-function ClickSurnombre(number) {
+function onclickSurnombre(number) {
     if (aString == undefined) {
         aString = number
-    } else {
+    }
+    else{
         bString = number
     }
-
     afficheur()
+    
 }
-// afficheur
-
+// afficher
 function afficheur(number) {
     var afficheur = document.getElementById("afficheur")
     afficheur.value = ''
-
-    if (a != undefined && b != undefined && operation != undefined) {
+    if (a != undefined && b != undefined && operation != undefined  ) {
         afficheur.value = number
-    } else {
+        
+    }
+    else{
         if (aString != undefined) {
-            afficheur.value =  afficheur.value + aString
-        }
+            afficheur.value += aString
+         }
         if (operation != undefined) {
-            afficheur.value = afficheur.value + operation
-        }
+            afficheur.value += operation
+         }
         if (bString != undefined) {
-            afficheur.value =  afficheur.value + bString
-        }
+            afficheur.value += bString
+         }
     }
-
+    
 }
-
-//  operation 
-function Operation(operationParm) {
+// operation
+function operaTion(operationparam) {
     if (operation == undefined) {
-        operation = operationParm
+        operation = operationparam
     }
-
     afficheur()
 }
-
-// egale  : 
-
+// egale
 function Egale() {
-    a = parseFloat(aString);
-    b = parseFloat(bString);
-
-    resultat = calculate(a, b, operation)
-
+    a = parseFloat(aString)
+    b = parseFloat (bString)
+    resultat = calculer(a , b , operation)
     afficheur(resultat)
-
 }
-//  calculer:
-
-function calculate(a, b, operation) {
-    var resultat = undefined
-
+// calculer
+function calculer(a,b,operation) {
+    var _resultat = undefined
     switch (operation) {
-        case "+":
-            resultat = a + b 
+        case '+':
+            _resultat = a + b
             break;
         case '-':
-            resultat = a - b;
+            _resultat = a - b
             break;
-
+        case '*':
+            _resultat = a * b
+            break;
+        case '/':
+            _resultat = a / b
+            break;
+    
         default:
             break;
     }
-
-    return resultat
+    return _resultat
 }
-
-// suprimmer:
-function suprimer (){
-    aString = undefined; 
-    bString =undefined;
-    operation =undefined;
-    a =undefined;
-    b =undefined;
-    resultat = undefined;
-    var afficheur = document.getElementById('afficheur');
-    
-    afficheur.value = '';
-} 
-    
-     
+// suprimmer
+ function suprimer() {
+     a = undefined;
+     b = undefined;
+     aString = undefined;
+     bString = undefined;
+     operation = undefined;
+     resultat = undefined;
+     var afficheur = document.getElementById("afficheur");
+     afficheur.value = ''
+ }
