@@ -1,3 +1,4 @@
+
 // declaration
 var aString;
 var bString;
