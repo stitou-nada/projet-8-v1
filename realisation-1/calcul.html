@@ -8,31 +8,32 @@
     <script src="calculer.js"></script>
     <link rel="stylesheet" href="style.css">
 <body>
+  
   <div class="calcul">
-    <input  type="text" id="afficheur">
-    <button class="click" onclick="suprimer()">c</button>
-   <div class="calculator">
+    <h1 id="titre">calculatrice</h1>
+    <input  type="text" id="afficheur" class="screen">
+   
     <button class="click" onclick="onclickSurnombre(8)">7</button>
     <button class="click" onclick="onclickSurnombre(8)">8</button>
     <button class="click" onclick="onclickSurnombre(9)">9</button>
-    <button class="click" onclick="operaTion('+')">+</button>
-   <br>
+   
+   
     <button class="click" onclick="onclickSurnombre(4)">4</button>
     <button class="click" onclick="onclickSurnombre(5)">5</button>
     <button class="click" onclick="onclickSurnombre(6)">6</button>
-    <button class="click" onclick="operaTion('-')">-</button>
-  <br>
+    
+  
     <button class="click" onclick="onclickSurnombre(1)">1</button>
     <button class="click" onclick="onclickSurnombre(2)">2</button>
     <button class="click" onclick="onclickSurnombre(3)">3</button>
-    <button class="click" onclick="operaTion('*')">*</button>
-  <br>
     <button class="click" onclick="onclickSurnombre(0)">0</button>
-    <button class="click-point" onclick="onclickSurnombre('.')">.</button>
-    <button class="click-egale" onclick="Egale()">=</button> 
-    <button class="click-suprimer" onclick="operaTion('/')">/</button>
-    
-  </div>
+
+    <button class="click" id="operation" onclick="operaTion('+')">+</button>
+    <button class="click" id="operation" onclick="operaTion('-')">-</button>
+    <button class="click" id="operation" onclick="operaTion('*')">x</button>
+    <button class="click" id="operation" onclick="operaTion('/')">/</button>
+    <button class="click" id="operation" onclick="Egale()">=</button> 
+    <button class="click" id="btn" onclick="suprimer()">c</button>
   </div>
 </body>
 </html>
