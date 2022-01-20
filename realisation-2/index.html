@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculatrice</title>
-    <script src="calculer.js"></script>
     <link rel="stylesheet" href="style.css">
-<body>
-  
-  <div class="container">
+    <script src="calcul(oop).js"></script>
+    <script src="scripts.js"></script>
+   
+</head>
+<div class="container">
     <form name="form">
     <div class="display">
       <input type="text" placeholder="0" name="displayResult" id="afficheur" />
@@ -26,14 +28,14 @@
         <input type="button" name="b4" value="4" onClick="onclickSurnombre(4)">
           <input type="button" name="b5" value="5" onClick="onclickSurnombre(5)">
           <input type="button" name="b6" value="6" onClick="onclickSurnombre(6)">
-          <input type="button" name="subb" value="-" onClick="operaTion('-')">
+          <input type="button" name="subb" value="-" onClick="operaTion('+')">
         </div>
         
         <div class="row">
         <input type="button" name="b1" value="1" onClick="onclickSurnombre(1)">
           <input type="button" name="b2" value="2" onClick="onclickSurnombre(2)">
           <input type="button" name="b3" value="3" onClick="onclickSurnombre(3)">
-          <input type="button" name="mulb" value="*" onClick="operaTion('*')">
+          <input type="button" name="mulb" value="*" onClick="operaTion('+')">
         </div>
         
         <div class="row">
