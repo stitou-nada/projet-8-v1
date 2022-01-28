@@ -45,10 +45,10 @@ class Calculatrice{
       } 
       return this._result
    }
-   efface (){
-       this_a = undefined;
-       this_b = undefined;
-       this_result = undefined;
-       this_operation = undefined;
+   efface(){
+       this._a = undefined;
+       this._b = undefined;
+       this._result = undefined;
+       this._operation = undefined;
    }
 }
